@@ -42,21 +42,21 @@ function moveSlide(i){
   slideIndicator.eq(currentIdx).addClass('active');
 };
 
-function autoSlide(){
-  slideTimer = setInterval(function(){
-    let ni = (currentIdx + 1)%slides.length;
-    moveSlide(ni);
-  },3000);
-};
-autoSlide();
+// function autoSlide(){
+//   slideTimer = setInterval(function(){
+//     let ni = (currentIdx + 1)%slides.length;
+//     moveSlide(ni);
+//   },5000);
+// };
+// autoSlide();
 
 
-slideWrapper.mouseenter(function(){
-clearInterval(slideTimer);
-})
-.mouseleave(function(){
-autoSlide()
-});
+// slideWrapper.mouseenter(function(){
+// clearInterval(slideTimer);
+// })
+// .mouseleave(function(){
+// autoSlide()
+// });
 
 
 
@@ -73,26 +73,26 @@ let slideContainer = $('.menu-slide'),
     slideNext = slideContainer.find('.menu-btn .next');
 
   $('.menu-card-item').css({'width': slideWidth, 'height': slideHeight}); 
-  $('menu-card').css({'width': slideItemsWidth, 'height': slideHeight}); 
+  $('.menu-card').css({'width': slideItemsWidth, 'height': slideHeight}); 
   $('.menu-card-item:last-child').prependTo($('.menu-card')); 
   $('.menu-card').css({'margin-left': -slideWidth}); 
 
 
   function slideLeft(){
-    $('.menu-card').stop().animate({left: -slideWidth}, 500, function(){
+    $('.menu-card').stop().animate({left: -slideWidth}, 5000, function(){
       $('.menu-card').css({'left': 0}); 
       $('.menu-card-item:first-child').appendTo('.menu-card'); 
     });   
   };
 
   function slideRight(){
-    $('.menu-card').stop().animate({left: slideWidth}, 500, function(){
+    $('.menu-card').stop().animate({left: slideWidth}, 5000, function(){
       $('.menu-card').css({'left': 0});  //최종위치
-      $('.menu-card-item:lsdt-child').prependTo('.menu-card'); 
+      $('.menu-card-item:last-child').prependTo('.menu-card'); 
     });   
   };
 
-  slideAuto = setInterval(slideLeft, 4000);
+  slideAuto = setInterval(slideLeft, 5000);
 
 
 slidePrev.click(function(e){
@@ -110,7 +110,7 @@ slideContainer.mouseenter(function(){
   clearInterval(slideAuto);
 })
 .mouseleave(function(){
-  slideAuto = setInterval(slideLeft, 4000);
+  slideAuto = setInterval(slideLeft, 5000);
 });
 
 
