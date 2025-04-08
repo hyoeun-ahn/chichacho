@@ -42,21 +42,21 @@ function moveSlide(i){
   slideIndicator.eq(currentIdx).addClass('active');
 };
 
-// function autoSlide(){
-//   slideTimer = setInterval(function(){
-//     let ni = (currentIdx + 1)%slides.length;
-//     moveSlide(ni);
-//   },5000);
-// };
-// autoSlide();
+function autoSlide(){
+  slideTimer = setInterval(function(){
+    let ni = (currentIdx + 1)%slides.length;
+    moveSlide(ni);
+  },5000);
+};
+autoSlide();
 
 
-// slideWrapper.mouseenter(function(){
-// clearInterval(slideTimer);
-// })
-// .mouseleave(function(){
-// autoSlide()
-// });
+slideWrapper.mouseenter(function(){
+clearInterval(slideTimer);
+})
+.mouseleave(function(){
+autoSlide()
+});
 
 
 
@@ -79,14 +79,14 @@ let slideContainer = $('.menu-slide'),
 
 
   function slideLeft(){
-    $('.menu-card').stop().animate({left: -slideWidth}, 5000, function(){
+    $('.menu-card').stop().animate({left: -slideWidth}, 1000, function(){
       $('.menu-card').css({'left': 0}); 
       $('.menu-card-item:first-child').appendTo('.menu-card'); 
     });   
   };
 
   function slideRight(){
-    $('.menu-card').stop().animate({left: slideWidth}, 5000, function(){
+    $('.menu-card').stop().animate({left: slideWidth}, 1000, function(){
       $('.menu-card').css({'left': 0});  //최종위치
       $('.menu-card-item:last-child').prependTo('.menu-card'); 
     });   
