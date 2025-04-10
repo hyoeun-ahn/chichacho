@@ -27,7 +27,7 @@ slideIndicator.click(function(e){
 
 
 
-//moveSlide함수__________________________
+// moveSlide함수__________________________
 function moveSlide(i){
   if(currentIdx === i) return;
 
@@ -79,15 +79,15 @@ let slideContainer = $('.menu-slide'),
 
 
   function slideLeft(){
-    $('.menu-card').stop().animate({left: -slideWidth}, 1000, function(){
+    $('.menu-card').stop().animate({left: -slideWidth}, 800, function(){
       $('.menu-card').css({'left': 0}); 
       $('.menu-card-item:first-child').appendTo('.menu-card'); 
     });   
   };
 
   function slideRight(){
-    $('.menu-card').stop().animate({left: slideWidth}, 1000, function(){
-      $('.menu-card').css({'left': 0});  //최종위치
+    $('.menu-card').stop().animate({left: slideWidth}, 800, function(){
+      $('.menu-card').css({'left': 0});  
       $('.menu-card-item:last-child').prependTo('.menu-card'); 
     });   
   };
