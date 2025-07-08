@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>치키차카초코-카테고리</title>
+  <link rel="shortcut icon" href="image/favicon.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xpressengine/xeicon@2.3.3/xeicon.min.css">
 </head>
@@ -11,9 +12,9 @@
   
 <header>
   <nav>
-    <h1 class="logo1">
+    <a href="#" class="logo1">
       <img src="image/logo-top.png" alt="로고-메뉴">
-    </h1>
+    </a>
     <ul class="gnb">
       <li class="gnb-main"><a href="#none">about us</a>
         <ul class="gnb-sub">
@@ -36,8 +37,8 @@
   </nav>
 </header>
 
-<section>
-  <div class="main">
+<main>
+  <section class="main">
     <ul class="slide-list">
       <li class="slide"><a href="#none"><img src="image/main1.png" alt=""></a></li>
       <li class="slide"><a href="#none"><img src="image/main2.png" alt=""></a></li>
@@ -48,12 +49,13 @@
       <a href="#none">2</a>
       <a href="#none">3</a>
     </div>
-  </div>
+  </section>
 
-  <div class="menu">
-    <h2>치차초 <em>#MENU</em></h2>
-    <h3>고단한 하루를 달달하게!</h3>
-    <h6>more</h6>
+  <section class="menu">
+    <div class="section-tit">
+      <h2>치차초 <em>#MENU</em></h2>
+      <h3>고단한 하루를 달달하게!</h3>
+    </div>
     <div class="menu-slide">
       <ul class="menu-card">
         <li class="menu-card-item">
@@ -83,13 +85,16 @@
         <a class="next" href="#none"><img src="image/btn-next.png" alt=""></a>
       </div>
     </div>
-  </div>
+    <a href="#none" class="menu-more">
+      more!
+    </a>
+  </section>
 
-
-
-  <div class="sns">
-    <h2>치차초 <em>#SNS</em></h2>
-    <h3>치차초의 소식을 빠르게 접해보세요!</h3>
+  <section class="sns">
+    <div class="section-tit">
+      <h2>치차초 <em>#SNS</em></h2>
+      <h3>치차초의 소식을 빠르게 접해보세요!</h3>
+    </div>
     <div class="sns-set">
       <div class="top">
         <div class="top-left">
@@ -135,32 +140,27 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-
-
-
-
-
-  <div class="ask-bg">
-    <div class="ask">
+  <section class="ask">
+      <div class="section-tit">
         <h2>치차초 <em>#ASK</em></h2>
         <h3>궁금한 점이 있다면?</h3>
-        <div class="form1">
-          <div>
-            <b>이름</b>
-            <input type="text" name="name">
-          </div>
-          <div>
-            <b>연락처</b>
-            <input type="tel" name="tel">
-          </div>
-          <div>
-            <b>문의내용</b>
-              <textarea id="textarea"></textarea>
-          </div>
+      </div>
+      <div class="form1">
+        <div>
+          <b>이름</b>
+          <input type="text" name="name">
         </div>
-    </div>
+        <div>
+          <b>연락처</b>
+          <input type="tel" name="tel">
+        </div>
+        <div>
+          <b>문의내용</b>
+            <textarea id="textarea"></textarea>
+        </div>
+      </div>
     <div class="form2">
       <h3>개인정보 수집 및 이용 동의</h3>
       <div class="scroll">
@@ -229,14 +229,13 @@
       </div>
       <button>제출</button>
     </div>
-  </div>
+  </section>
 
-
-
-
-  <div class="store-bg">
+  <section class="store-bg">
     <div class="store">
-      <h2>치차초 <em>#STORE</em></h2>
+      <div class="section-tit">
+        <h2>치차초 <em>#STORE</em></h2>
+      </div>
       <div class="store-menu">
         <div class="store-list">
           <img src="image/store1.png" alt="가맹문의">
@@ -250,8 +249,8 @@
     </div>
     <iframe width="1000" height="562" src="https://www.youtube.com/embed/v4MGvZgjBAM?si=16Uh-f8rx-X0Mi9g" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
     </iframe>
-  </div>
-
+  </section>
+</main>
 
 
   <footer>
@@ -294,10 +293,6 @@
     <address>Copyright© 2021 chikichakachoco design team ALL Right Reservod</address>
   </footer>
 
-
-
-
-</section>
 
 
 <script src="js/jquery-3.7.1.min.js"></script>
